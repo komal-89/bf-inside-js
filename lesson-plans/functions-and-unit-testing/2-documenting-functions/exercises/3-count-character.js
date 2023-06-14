@@ -5,7 +5,7 @@ console.log('-- begin --');
 /**
  *
  */
-const countCharacter = (text, toCount) => {
+const countCharacter = (text, toCount ='') => {
   if (toCount.length !== 1) {
     return -1;
   }
@@ -34,5 +34,14 @@ console.assert(_3_actual === _3_expect, 'Test 3');
 const _4_expect = -1;
 const _4_actual = countCharacter('apple', 'ap');
 console.assert(_4_actual === _4_expect, 'Test 4');
+
+const _5_expect = -1;
+const _5_actual = countCharacter('hello');
+console.assert(_5_actual === _5_expect, 'Test 5: second default parameter');
+
+const _6_expect = -1;
+const _6_actual = countCharacter();
+console.assert(_6_actual === _6_expect, 'Test 6: both default parameters');
+
 
 console.log('-- end --');

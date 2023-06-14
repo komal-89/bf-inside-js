@@ -8,7 +8,7 @@ console.log('-- begin --');
  * @_ {_} _ - _
  * @_ {_}  _
  */
-const isPalindrome = (toCheck) => {
+const isPalindrome = (toCheck ='')=> {
   let reversed = '';
   for (const character of toCheck) {
     reversed = character + reversed;
@@ -31,5 +31,9 @@ console.assert(_3_actual === _3_expect, 'Test 3');
 const _4_expect = true;
 const _4_actual = isPalindrome('hannah');
 console.assert(_4_actual === _4_expect, 'Test 4');
+
+const _5_expect = true;
+const _5_actual = isPalindrome();
+console.assert(_5_actual === _5_expect, 'Test 5: default parameter');
 
 console.log('-- end --');
