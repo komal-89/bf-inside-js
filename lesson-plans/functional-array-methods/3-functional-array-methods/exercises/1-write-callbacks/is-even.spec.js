@@ -28,7 +28,7 @@ describe('isEven: determines if a number is even or not', () => {
       const actual = [2, 6, -8, -102, 102].every(isEven);
       expect(actual).toEqual(true);
     });
-    it('removes false if all numbers are odd', () => {
+    it('returns false if all numbers are odd', () => {
       const actual = [3, 7, -7, -101, 103].every(isEven);
       expect(actual).toEqual(false);
     });
